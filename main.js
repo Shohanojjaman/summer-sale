@@ -26,7 +26,7 @@ document.getElementById('products-gallery').addEventListener('click', function (
 
     if (couponCode === 'SELL200') {
       const discountElement = document.getElementById('discount');
-      const discountAmount = preSubTotal * (2 / 10);
+      const discountAmount = subTotal * (20 / 100);
       discountElement.innerText = discountAmount.toFixed(2);
       const totalPriceElement = document.getElementById('totalPrice');
       totalPriceElement.innerText = (subTotal - discountAmount).toFixed(2);
