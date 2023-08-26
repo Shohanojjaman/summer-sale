@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -29,7 +29,7 @@
                     <p class="text-text text-2xl font-medium mb-6">---SALE FEVER---</p>
                     <h1 class="text-text text-4xl font-bold mb-8">Purchase TK 200 or above & get <span
                             class="text-theme ">20% off</span></h1>
-                    <p class="text-xl font-medium">Use Promo Code<button class="btn  ml-4">SELL200</button>
+                    <p class="text-xl font-medium">Use Promo Code<button class="primary-btn  ml-4">SELL200</button>
                     </p>
                 </div>
                 <div class="lg:basis-1/2 ">
@@ -504,8 +504,8 @@
                         <div class="relative mt-4">
                             <form action="" id="coupon">
                                 <input type="text" name="couponCode" id="couponCode" placeholder="Coupon code"
-                                    class="w-full rounded-lg px-4 border-2 py-3 border-[#11111126] focus:outline-none">
-                                <button type="submit" class="btn absolute right-0 top-0 bottom-0 rounded-l-none"
+                                    class="w-full bg-white rounded-lg px-4 border-2 py-3 border-[#11111126] focus:outline-none">
+                                <button type="submit" class="primary-btn absolute right-0 top-0 bottom-0 rounded-l-none"
                                     id="couponSubmit" disabled>Apply</button>
                             </form>
                         </div>
@@ -522,11 +522,13 @@
                         <p class="text-xl leading-loose font-medium">Total: <span class="text-[#11111180]"><span
                                     id="totalPrice">00</span> TK</span></p>
                         <hr class="my-6">
-                        <button class="btn w-full" id="purchase" disabled>Make Purchase</button>
+                        <button onclick="my_modal_1.showModal()" class="primary-btn w-full" id="purchase" disabled>Make
+                            Purchase</button>
                     </div>
                 </aside>
                 <!-- Cart End -->
             </div>
+
         </div>
         <!-- Container End -->
     </main>
@@ -534,8 +536,20 @@
     <!-- Footer Section Start -->
     <footer>
 
+
     </footer>
     <!-- Footer Section End -->
+    <!-- PopUp Start -->
+    <dialog id="my_modal_1" class="modal">
+        <form method="dialog" class="modal-box flex flex-col justify-center items-center gap-6 py-16">
+            <img src="./images/congo.png" alt="Congratulation" class="w-40">
+            <h3 class="text-5xl font-bold">Congratulation</h3>
+            <p class="text-xl">You Purchase the product</p>
+            <button class="primary-btn" onclick="window.location.reload()">Go Home</button>
+            </div>
+        </form>
+    </dialog>
+    <!-- PopUp End -->
 
     <!-- JS Link Here -->
     <script src="./main.js"></script>
